@@ -20,6 +20,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field1Click
   end
   object Field2: TImage
     Left = 152
@@ -27,6 +28,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field2Click
   end
   object Field3: TImage
     Left = 248
@@ -34,6 +36,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field3Click
   end
   object Field4: TImage
     Left = 56
@@ -41,6 +44,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field4Click
   end
   object Field5: TImage
     Left = 152
@@ -48,6 +52,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field5Click
   end
   object Field6: TImage
     Left = 248
@@ -55,6 +60,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field6Click
   end
   object Field7: TImage
     Left = 56
@@ -62,6 +68,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field7Click
   end
   object Field8: TImage
     Left = 152
@@ -69,6 +76,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field8Click
   end
   object Field9: TImage
     Left = 248
@@ -76,6 +84,7 @@ object Form1: TForm1
     Width = 100
     Height = 100
     Cursor = crHandPoint
+    OnClick = Field9Click
   end
   object Turn: TLabel
     Left = 496

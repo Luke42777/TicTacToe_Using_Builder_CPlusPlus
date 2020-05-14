@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 125
   Width = 924
   Height = 480
-  Caption = 'Form1'
+  Caption = 'Tic Tac Toe v2.0'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Field1: TImage
@@ -89,8 +90,8 @@ object Form1: TForm1
     Font.Style = []
     ParentFont = False
   end
-  object player_turn: TImage
-    Left = 592
+  object Player_turn: TImage
+    Left = 576
     Top = 112
     Width = 30
     Height = 30

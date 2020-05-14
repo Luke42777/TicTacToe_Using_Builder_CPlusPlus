@@ -22,8 +22,9 @@ __published:	// IDE-managed Components
         TImage *Field8;
         TImage *Field9;
         TLabel *Turn;
-        TImage *player_turn;
+        TImage *Player_turn;
         TLabel *Label1;
+        void __fastcall FormCreate(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

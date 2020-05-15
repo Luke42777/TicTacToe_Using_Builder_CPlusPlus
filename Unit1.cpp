@@ -10,6 +10,36 @@
 TForm1 *Form1;
 char p1,p2,p3,p4,p5,p6,p7,p8,p9; // this var stroes info about fields 'n' '' 'o'
 char who; // to store which player's turn
+
+void IsGameWon()
+{
+        if((p1 != 'n' && p1 == p2 && p2 == p3)
+        ||   (p4 != 'n' && p4 == p5 && p5 == p6)
+        ||  (p7 != 'n' && p7 == p8 && p8 == p9)
+        ||   (p1 != 'n' && p1 == p4 && p4 == p7)
+        ||  (p2 != 'n' && p2 == p5 && p5 == p8)
+        ||   (p3 != 'n' && p3 == p6 && p6 == p9)
+        ||  (p1 != 'n' && p1 == p5 && p5 == p9)
+        ||   (p3 != 'n' && p3 == p5 && p5 == p7))
+         {
+                //who won the game?
+                // that will be opposite to current of 'who' variable because
+                //who is changed to another player after click happended
+                //we use message box
+                 char *w;    // message box requires C-string
+                 if(who == 'x')
+                 {
+                 w = "Player O won";
+                 }
+                else
+                {
+                 w = "Player X  won";
+                }
+                Application->MessageBox(w,"Game over",MB_OK);
+
+         }
+
+}
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
         : TForm(Owner)
@@ -42,6 +72,15 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
         who = 'o';
 
+        Field1->Enabled = true;
+        Field2->Enabled = true;
+        Field3->Enabled = true;
+        Field4->Enabled = true;
+        Field5->Enabled = true;
+        Field6->Enabled = true;
+        Field7->Enabled = true;
+        Field8->Enabled = true;
+        Field9->Enabled = true;
 
 }
 //---------------------------------------------------------------------------
@@ -56,8 +95,6 @@ void __fastcall TForm1::Field1Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field1->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -67,10 +104,11 @@ void __fastcall TForm1::Field1Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field1->Cursor  = crArrow;
-
                 }
+        Field1->Cursor  = crArrow;
         }
+        Field1->Enabled = false;
+         IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -86,8 +124,6 @@ void __fastcall TForm1::Field2Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field2->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -97,10 +133,11 @@ void __fastcall TForm1::Field2Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field2->Cursor  = crArrow;
-
                 }
-        }      
+        Field2->Cursor  = crArrow;
+        }
+           Field2->Enabled = false;
+         IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -115,8 +152,6 @@ void __fastcall TForm1::Field3Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field3->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -126,10 +161,11 @@ void __fastcall TForm1::Field3Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field3->Cursor  = crArrow;
-
                 }
-        }     
+               Field3->Cursor  = crArrow;
+        }
+           Field3->Enabled = false;
+         IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -144,8 +180,6 @@ void __fastcall TForm1::Field4Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field4->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -155,10 +189,11 @@ void __fastcall TForm1::Field4Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field4->Cursor  = crArrow;
-
                 }
-        }   
+                 Field4->Cursor  = crArrow;
+        }
+           Field4->Enabled = false;
+           IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -173,8 +208,6 @@ void __fastcall TForm1::Field5Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field5->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -184,10 +217,11 @@ void __fastcall TForm1::Field5Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field5->Cursor  = crArrow;
-
                 }
-        }       
+              Field5->Cursor  = crArrow;
+        }
+            Field5->Enabled = false;
+          IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -202,8 +236,6 @@ void __fastcall TForm1::Field6Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field6->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -213,10 +245,11 @@ void __fastcall TForm1::Field6Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field6->Cursor  = crArrow;
-
                 }
-        }       
+              Field6->Cursor  = crArrow;
+        }
+          Field6->Enabled = false;
+       IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -231,8 +264,6 @@ void __fastcall TForm1::Field7Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field7->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -242,10 +273,11 @@ void __fastcall TForm1::Field7Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field7->Cursor  = crArrow;
-
                 }
-        }    
+        Field7->Cursor  = crArrow;
+        }
+           Field7->Enabled = false;
+          IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -260,8 +292,6 @@ void __fastcall TForm1::Field8Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field8->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -271,10 +301,11 @@ void __fastcall TForm1::Field8Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field8->Cursor = crArrow;
-
                 }
-        }    
+        Field8->Cursor  = crArrow;
+        }
+        Field8->Enabled = false;
+          IsGameWon();
 }
 //---------------------------------------------------------------------------
 
@@ -289,8 +320,6 @@ void __fastcall TForm1::Field9Click(TObject *Sender)
 
                   who = 'x';  //turn is changing
                   Player_turn->Picture->LoadFromFile("img/xsmall.bmp");
-                  Field9->Cursor  = crArrow;
-
                 }
                 else
                 {
@@ -300,10 +329,14 @@ void __fastcall TForm1::Field9Click(TObject *Sender)
 
                  who = 'o';
                  Player_turn->Picture->LoadFromFile("img/osmall.bmp");
-                 Field9->Cursor  = crArrow;
-
                 }
+             Field9->Cursor  = crArrow;
         }
+          Field9->Enabled = false;
+         IsGameWon();
 }
 //---------------------------------------------------------------------------
+
+
+
 

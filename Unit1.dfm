@@ -7,13 +7,13 @@ object Form1: TForm1
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -32
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 37
   object Field1: TImage
     Left = 56
     Top = 24
@@ -105,18 +105,13 @@ object Form1: TForm1
     Width = 30
     Height = 30
   end
-  object Label1: TLabel
-    Left = 504
-    Top = 224
-    Width = 83
-    Height = 37
-    Cursor = crHandPoint
-    Caption = 'Again'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -32
-    Font.Name = 'MS Sans Serif'
-    Font.Style = []
-    ParentFont = False
+  object Button1: TButton
+    Left = 488
+    Top = 184
+    Width = 169
+    Height = 65
+    Caption = 'Play Again'
+    TabOrder = 0
+    OnClick = FormCreate
   end
 end

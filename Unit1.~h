@@ -25,6 +25,15 @@ __published:	// IDE-managed Components
         TImage *Player_turn;
         TLabel *Label1;
         void __fastcall FormCreate(TObject *Sender);
+        void __fastcall Field1Click(TObject *Sender);
+        void __fastcall Field2Click(TObject *Sender);
+        void __fastcall Field3Click(TObject *Sender);
+        void __fastcall Field4Click(TObject *Sender);
+        void __fastcall Field5Click(TObject *Sender);
+        void __fastcall Field6Click(TObject *Sender);
+        void __fastcall Field7Click(TObject *Sender);
+        void __fastcall Field8Click(TObject *Sender);
+        void __fastcall Field9Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

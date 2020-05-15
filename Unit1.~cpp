@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "Unit1.h"
+#include "Unit2.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -339,4 +340,17 @@ void __fastcall TForm1::Field9Click(TObject *Sender)
 
 
 
+
+
+void __fastcall TForm1::QRcodetoGitHub1Click(TObject *Sender)
+{
+  Form2->ShowModal();      
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::VisitprojectGithubpage1Click(TObject *Sender)
+{
+     ShellExecute(NULL,"open","https://github.com/Luke42777/TicTacToe_Using_Builder_CPlusPlus.git",NULL,NULL,SW_SHOWNORMAL);
+}
+//---------------------------------------------------------------------------
 

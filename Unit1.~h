@@ -8,6 +8,7 @@
 #include <StdCtrls.hpp>
 #include <Forms.hpp>
 #include <ExtCtrls.hpp>
+#include <Menus.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -24,6 +25,10 @@ __published:	// IDE-managed Components
         TLabel *Turn;
         TImage *Player_turn;
         TButton *Button1;
+        TMainMenu *Info;
+        TMenuItem *Info1;
+        TMenuItem *QRcodetoGitHub1;
+        TMenuItem *VisitprojectGithubpage1;
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall Field1Click(TObject *Sender);
         void __fastcall Field2Click(TObject *Sender);
@@ -34,6 +39,8 @@ __published:	// IDE-managed Components
         void __fastcall Field7Click(TObject *Sender);
         void __fastcall Field8Click(TObject *Sender);
         void __fastcall Field9Click(TObject *Sender);
+        void __fastcall QRcodetoGitHub1Click(TObject *Sender);
+        void __fastcall VisitprojectGithubpage1Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

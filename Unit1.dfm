@@ -1,17 +1,18 @@
 object Form1: TForm1
   Left = 192
   Top = 125
+  Width = 541
+  Height = 361
   BorderIcons = [biSystemMenu, biMinimize]
-  BorderStyle = bsDialog
+  BorderStyle = bsSizeToolWin
   Caption = 'Tic Tac Toe v2.0'
-  ClientHeight = 322
-  ClientWidth = 525
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -32
   Font.Name = 'MS Sans Serif'
   Font.Style = []
+  Menu = Info
   OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -115,5 +116,20 @@ object Form1: TForm1
     Caption = 'Play Again'
     TabOrder = 0
     OnClick = FormCreate
+  end
+  object Info: TMainMenu
+    Left = 464
+    Top = 8
+    object Info1: TMenuItem
+      Caption = 'Info'
+      object QRcodetoGitHub1: TMenuItem
+        Caption = 'QR code to GitHub'
+        OnClick = QRcodetoGitHub1Click
+      end
+      object VisitprojectGithubpage1: TMenuItem
+        Caption = 'Visit project Github page'
+        OnClick = VisitprojectGithubpage1Click
+      end
+    end
   end
 end

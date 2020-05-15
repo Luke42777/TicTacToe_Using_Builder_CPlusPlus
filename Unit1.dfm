@@ -1,9 +1,11 @@
 object Form1: TForm1
   Left = 192
   Top = 125
-  Width = 924
-  Height = 480
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
   Caption = 'Tic Tac Toe v2.0'
+  ClientHeight = 322
+  ClientWidth = 525
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,80 +17,80 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 37
   object Field1: TImage
-    Left = 56
-    Top = 24
+    Left = 24
+    Top = 8
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field1Click
   end
   object Field2: TImage
-    Left = 152
-    Top = 24
+    Left = 120
+    Top = 8
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field2Click
   end
   object Field3: TImage
-    Left = 248
-    Top = 24
+    Left = 216
+    Top = 8
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field3Click
   end
   object Field4: TImage
-    Left = 56
-    Top = 120
+    Left = 24
+    Top = 104
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field4Click
   end
   object Field5: TImage
-    Left = 152
-    Top = 120
+    Left = 120
+    Top = 104
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field5Click
   end
   object Field6: TImage
-    Left = 248
-    Top = 120
+    Left = 216
+    Top = 104
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field6Click
   end
   object Field7: TImage
-    Left = 56
-    Top = 216
+    Left = 24
+    Top = 200
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field7Click
   end
   object Field8: TImage
-    Left = 152
-    Top = 216
+    Left = 120
+    Top = 200
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field8Click
   end
   object Field9: TImage
-    Left = 248
-    Top = 216
+    Left = 216
+    Top = 200
     Width = 100
     Height = 100
     Cursor = crHandPoint
     OnClick = Field9Click
   end
   object Turn: TLabel
-    Left = 496
-    Top = 112
+    Left = 352
+    Top = 80
     Width = 76
     Height = 37
     Caption = 'Turn:'
@@ -100,14 +102,14 @@ object Form1: TForm1
     ParentFont = False
   end
   object Player_turn: TImage
-    Left = 576
-    Top = 112
+    Left = 448
+    Top = 80
     Width = 30
     Height = 30
   end
   object Button1: TButton
-    Left = 488
-    Top = 184
+    Left = 336
+    Top = 152
     Width = 169
     Height = 65
     Caption = 'Play Again'

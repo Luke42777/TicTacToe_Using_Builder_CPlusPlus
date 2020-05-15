@@ -36,6 +36,7 @@ void IsGameWon()
                  w = "Player X  won";
                 }
                 Application->MessageBox(w,"Game over",MB_OK);
+
          }
 
 }
@@ -71,6 +72,15 @@ void __fastcall TForm1::FormCreate(TObject *Sender)
 
         who = 'o';
 
+        Field1->Enabled = true;
+        Field2->Enabled = true;
+        Field3->Enabled = true;
+        Field4->Enabled = true;
+        Field5->Enabled = true;
+        Field6->Enabled = true;
+        Field7->Enabled = true;
+        Field8->Enabled = true;
+        Field9->Enabled = true;
 
 }
 //---------------------------------------------------------------------------
@@ -97,6 +107,7 @@ void __fastcall TForm1::Field1Click(TObject *Sender)
                 }
         Field1->Cursor  = crArrow;
         }
+        Field1->Enabled = false;
          IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -125,6 +136,7 @@ void __fastcall TForm1::Field2Click(TObject *Sender)
                 }
         Field2->Cursor  = crArrow;
         }
+           Field2->Enabled = false;
          IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -152,6 +164,7 @@ void __fastcall TForm1::Field3Click(TObject *Sender)
                 }
                Field3->Cursor  = crArrow;
         }
+           Field3->Enabled = false;
          IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -179,6 +192,7 @@ void __fastcall TForm1::Field4Click(TObject *Sender)
                 }
                  Field4->Cursor  = crArrow;
         }
+           Field4->Enabled = false;
            IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -206,6 +220,7 @@ void __fastcall TForm1::Field5Click(TObject *Sender)
                 }
               Field5->Cursor  = crArrow;
         }
+            Field5->Enabled = false;
           IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -233,6 +248,7 @@ void __fastcall TForm1::Field6Click(TObject *Sender)
                 }
               Field6->Cursor  = crArrow;
         }
+          Field6->Enabled = false;
        IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -260,6 +276,7 @@ void __fastcall TForm1::Field7Click(TObject *Sender)
                 }
         Field7->Cursor  = crArrow;
         }
+           Field7->Enabled = false;
           IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -287,6 +304,7 @@ void __fastcall TForm1::Field8Click(TObject *Sender)
                 }
         Field8->Cursor  = crArrow;
         }
+        Field8->Enabled = false;
           IsGameWon();
 }
 //---------------------------------------------------------------------------
@@ -314,7 +332,11 @@ void __fastcall TForm1::Field9Click(TObject *Sender)
                 }
              Field9->Cursor  = crArrow;
         }
+          Field9->Enabled = false;
          IsGameWon();
 }
 //---------------------------------------------------------------------------
+
+
+
 

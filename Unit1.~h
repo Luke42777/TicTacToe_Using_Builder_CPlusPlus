@@ -23,7 +23,7 @@ __published:	// IDE-managed Components
         TImage *Field9;
         TLabel *Turn;
         TImage *Player_turn;
-        TLabel *Label1;
+        TButton *Button1;
         void __fastcall FormCreate(TObject *Sender);
         void __fastcall Field1Click(TObject *Sender);
         void __fastcall Field2Click(TObject *Sender);
